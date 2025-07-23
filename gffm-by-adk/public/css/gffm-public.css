@@ -1,0 +1,135 @@
+/**
+ * GFFM Public-Facing Stylesheet
+ *
+ * @since 3.0.0
+ */
+
+:root {
+    --gffm-blue: #2866ab;
+    --gffm-orange: #f89720;
+    --gffm-light-gray: #f8f9fa;
+    --gffm-medium-gray: #e9ecef;
+    --gffm-dark-gray: #6c757d;
+    --gffm-success: #28a745;
+    --gffm-error: #dc3545;
+}
+
+.gffm-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* --- Buttons --- */
+.gffm-button-primary {
+    background-color: var(--gffm-orange);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.gffm-button-primary:hover {
+    background-color: var(--gffm-blue);
+}
+
+/* --- Forms & Dashboard --- */
+.gffm-dashboard-wrapper, .gffm-directory-wrapper {
+    background-color: #fff;
+    border: 1px solid var(--gffm-medium-gray);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.gffm-form-row {
+    margin-bottom: 1.5rem;
+}
+
+.gffm-form-row label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.gffm-form-row input[type="text"],
+.gffm-form-row input[type="email"],
+.gffm-form-row input[type="url"],
+.gffm-form-row input[type="date"],
+.gffm-form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.gffm-form-description {
+    font-size: 0.9em;
+    color: var(--gffm-dark-gray);
+    margin-top: -0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Accordion --- */
+.gffm-accordion-item {
+    border: 1px solid var(--gffm-medium-gray);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.gffm-accordion-header {
+    background-color: var(--gffm-light-gray);
+    padding: 15px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--gffm-blue);
+}
+.gffm-accordion-content {
+    padding: 20px;
+    display: none;
+}
+.gffm-accordion-item.active .gffm-accordion-content {
+    display: block;
+}
+
+/* --- Directory --- */
+.gffm-directory-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--gffm-light-gray);
+    border-radius: 8px;
+}
+
+#gffm-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gffm-vendor-card {
+    border: 1px solid var(--gffm-medium-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+.gffm-vendor-card:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.gffm-vendor-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--gffm-light-gray);
+}
+.gffm-vendor-card-content {
+    padding: 15px;
+}
